@@ -10,10 +10,10 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class MethodsTest {
-    Methods<String> methodsUtil = new Methods<>();
+    Methods methodsUtil = new Methods();
     List<String> list = new ArrayList<>();
     List<People> peopleList=new ArrayList<>();
-    Methods<People> methodsUtilPeople = new Methods<>();
+    Methods methodsUtilPeople = new Methods();
 
 
     @Before
