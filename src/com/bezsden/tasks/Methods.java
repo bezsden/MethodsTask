@@ -1,22 +1,25 @@
 package com.bezsden.tasks;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.sun.org.apache.xerces.internal.xs.StringList;
+
+import java.util.*;
 
 public class Methods {
+    // constructor  TBDL
     public Methods() {
     }
 
-    void initRun() {
-        List list = new ArrayList();
-        list.add("a1");
-        list.add("a4");
-        list.add("a3");
-        list.add("a2");
-        list.add("a1");
-        list.add("a4");
+    public void sortAsc(List<String> list) {
+        Collections.sort(list); // it sorts it and saves it
     }
-    static void removeDuplicates(){
+
+    public void removeDuplicates(List<String> list) {
+        List<String> noDuplicatresList = new ArrayList<>(new HashSet<>(list));
+        list=noDuplicatresList;
+
+      //List<String> newList=new HashSet<>((HashSet<String>)list);
+        //list=(List<String>) newList;
+    }
 
     }
-}
+
