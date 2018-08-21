@@ -12,6 +12,9 @@ public class Methods {
     public void sortAsc(List<String> list) {
         Collections.sort(list); // it sorts it and saves it
     }
+    public void sortAscP(List<People> list) {
+        Collections.sort(list); // it sorts it and saves it
+    }
 
     public void removeDuplicates(List<String> list) {
         List<String> noDuplicatresList = new ArrayList<>(new HashSet<>(list));

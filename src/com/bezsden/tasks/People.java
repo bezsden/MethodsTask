@@ -4,7 +4,7 @@ enum Sex {
     WOMEN
 }
 
-public class People {
+public class People implements Comparable<People>{
     private final String name;
     private final Integer age;
     private final Sex sex;
@@ -35,4 +35,12 @@ public class People {
                 ", sex=" + sex +
                 '}';
     }
+
+    //@Override
+    public int compareTo(People o) {
+
+        return this.getName().compareTo(o.getName()) ;
+    }
+
+
 }

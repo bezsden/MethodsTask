@@ -26,7 +26,7 @@ public class MethodsTest {
         list.add("a4");
         //new People(«Вася», 16, Sex.MAN), new People(«Петя», 23, Sex.MAN),
         //// new People(«Елена», 42, Sex.WOMEN), new People(«Иван Иванович», 69, Sex.MAN))
-        peopleList.set(0,new People("Vasya",16,Sex.MAN));
+        peopleList.add(new People("Vasya",16,Sex.MAN));
         peopleList.add(new People("Petya",23,Sex.MAN));
         peopleList.add(new People("Lena",42,Sex.WOMEN));
         peopleList.add(new People("Ivanov Ivan Ivanovich",69,Sex.MAN));
@@ -42,6 +42,19 @@ public class MethodsTest {
         List<String> expectedList = Arrays.asList("a1", "a1", "a2", "a3", "a4", "a4");
         methodsUtil.sortAsc(list);
         assertEquals(expectedList, list);
+    }
+    @Test
+    public void testSortAscP() {
+        //List<People> expectedList = Arrays.asList(new People("Vasya", 16, Sex.MAN), new People("Petya", 23, Sex.MAN), new People("Lena", 42, Sex.WOMEN), new People("Ivanov Ivan Ivanovich", 69, Sex.MAN));
+       // List<People> expectedList = Arrays.asList(new People("Ivanov Ivan Ivanovich", 69, Sex.MAN), new People("Lena", 42, Sex.WOMEN), new People("Petya", 23, Sex.MAN), new People("Vasya", 16, Sex.MAN));
+        List<People> expectedList=new ArrayList<>();
+        expectedList.add(new People("Ivanov Ivan Ivanovich",69,Sex.MAN));
+        expectedList.add(new People("Lena",42,Sex.WOMEN));
+        expectedList.add(new People("Petya",23,Sex.MAN));
+        expectedList.add(new People("Vasya",16,Sex.MAN));
+        methodsUtilPeople.sortAscP(peopleList);
+        assertEquals(expectedList, peopleList);
+
     }
 
     @Test
