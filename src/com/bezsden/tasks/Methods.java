@@ -26,5 +26,11 @@ public class Methods {
         removeDuplicates(list);
 
     }
+    public void sortDscNoDuplicates(List<String> list) {
+
+        removeDuplicates(list);
+        sortDsc(list);
+
+    }
     }
 
