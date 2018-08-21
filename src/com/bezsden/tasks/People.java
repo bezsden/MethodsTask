@@ -1,8 +1,12 @@
 package com.bezsden.tasks;
+
+import java.util.Comparator;
+
 enum Sex {
     MAN,
     WOMEN
 }
+
 
 public class People implements Comparable<People>{
     private final String name;
@@ -14,6 +18,8 @@ public class People implements Comparable<People>{
         this.age = age;
         this.sex = sex;
     }
+
+
 
     public String getName() {
         return name;
@@ -36,11 +42,13 @@ public class People implements Comparable<People>{
                 '}';
     }
 
+
     //@Override
     public int compareTo(People o) {
 
         return this.getName().compareTo(o.getName()) ;
     }
+
 
 
 }
