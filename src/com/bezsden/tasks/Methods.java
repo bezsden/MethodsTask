@@ -15,10 +15,11 @@ public class Methods {
 
     public void removeDuplicates(List<String> list) {
         List<String> noDuplicatresList = new ArrayList<>(new HashSet<>(list));
-        list=noDuplicatresList;
-
-      //List<String> newList=new HashSet<>((HashSet<String>)list);
-        //list=(List<String>) newList;
+       list.clear();
+       list.addAll(noDuplicatresList);
+    }
+    public void sortDsc(List<String> list) {
+        Collections.sort(list); // it sorts it and saves it
     }
 
     }
