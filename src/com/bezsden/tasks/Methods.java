@@ -4,21 +4,21 @@ import com.sun.org.apache.xerces.internal.xs.StringList;
 
 import java.util.*;
 
-public class Methods {
+public class Methods<E> {
     // constructor  TBDL
     public Methods() {
     }
 
-    public void sortAsc(List<String> list) {
-        Collections.sort(list); // it sorts it and saves it
+    public void sortAsc(List<E> list1) {
+        Collections.sort(list1); // it sorts it and saves it
     }
 
-    public void removeDuplicates(List<String> list) {
-        List<String> noDuplicatresList = new ArrayList<>(new HashSet<>(list));
+    public void removeDuplicates(List<E> list) {
+        List<E> noDuplicatresList = new ArrayList<>(new HashSet<>(list));
        list.clear();
        list.addAll(noDuplicatresList);
     }
-    public void sortDsc(List<String> list) {
+    public void sortDsc(List<E> list) {
          Collections.sort(list, Collections.reverseOrder());
     }
     public void sortAscNoDuplicates(List<String> list) {

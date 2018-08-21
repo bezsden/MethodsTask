@@ -10,8 +10,11 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class MethodsTest {
-    Methods methodsUtil = new Methods();
+    Methods<String> methodsUtil = new Methods<>();
     List<String> list = new ArrayList<>();
+    List<People> peopleList=new ArrayList<>();
+    Methods<People> methodsUtilPeople = new Methods<>();
+
 
     @Before
     public void testInit() {
@@ -21,6 +24,15 @@ public class MethodsTest {
         list.add("a2");
         list.add("a1");
         list.add("a4");
+        //new People(«Вася», 16, Sex.MAN), new People(«Петя», 23, Sex.MAN),
+        //// new People(«Елена», 42, Sex.WOMEN), new People(«Иван Иванович», 69, Sex.MAN))
+        peopleList.set(0,new People("Vasya",16,Sex.MAN));
+        peopleList.add(new People("Petya",23,Sex.MAN));
+        peopleList.add(new People("Lena",42,Sex.WOMEN));
+        peopleList.add(new People("Ivanov Ivan Ivanovich",69,Sex.MAN));
+
+
+
         
 
     }

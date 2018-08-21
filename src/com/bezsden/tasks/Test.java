@@ -3,6 +3,7 @@ package com.bezsden.tasks;
 public abstract class Test {
 //    Условие: даны две коллекции
 // коллекция строк Arrays.asList(«a1», «a4», «a3», «a2», «a1», «a4»)
+
 // и коллекция людей класса People (с полями name — имя, age — возраст, sex — пол),
 // вида Arrays.asList( new People(«Вася», 16, Sex.MAN), new People(«Петя», 23, Sex.MAN),
 // new People(«Елена», 42, Sex.WOMEN), new People(«Иван Иванович», 69, Sex.MAN))
