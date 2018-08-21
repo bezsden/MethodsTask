@@ -19,8 +19,12 @@ public class Methods {
        list.addAll(noDuplicatresList);
     }
     public void sortDsc(List<String> list) {
-        Collections.sort(list); // it sorts it and saves it
+         Collections.sort(list, Collections.reverseOrder());
     }
+    public void sortAscNoDuplicates(List<String> list) {
+        sortAsc(list);
+        removeDuplicates(list);
 
+    }
     }
 

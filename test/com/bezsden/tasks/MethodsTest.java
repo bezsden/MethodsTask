@@ -39,5 +39,21 @@ public class MethodsTest {
         assertEquals(expectedList, list);
         assertEquals(4, list.size());
     }
+    @Test
+    public void testSortDsc() {
+
+        List<String> expectedList = Arrays.asList("a4", "a4", "a3", "a2", "a1", "a1");
+        methodsUtil.sortDsc(list);
+        assertEquals(expectedList, list);
+        assertEquals(6, list.size());
+    }
+    @Test
+    public void testSortAscNoDuplicates() {
+
+        List<String> expectedList = Arrays.asList("a1", "a2", "a3",  "a4");
+        methodsUtil.sortAscNoDuplicates(list);
+        assertEquals(expectedList, list);
+        assertEquals(4, list.size());
+    }
 
 }
