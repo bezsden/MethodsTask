@@ -3,14 +3,15 @@ package com.bezsden.tasks;
 import com.sun.org.apache.xerces.internal.xs.StringList;
 
 import java.util.*;
+import java.util.stream.Collectors;
+
 
 public class Methods {
-    // constructor  TBDL
-    public Methods() {
-    }
 
-    public void sortAsc(List<String> list) {
-        Collections.sort(list); // it sorts it and saves it
+
+
+    public List<String> sortAsc(List<String> list) {
+        return list.stream().sorted().collect(Collectors.toList()); // it sorts it and saves it
     }
     public void sortAscP(List<People> list) {
         Collections.sort(list); // it sorts it and saves it
